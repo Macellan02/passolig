@@ -55,19 +55,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   //sekmeler
-                  Row(
-                    children: [
-                      CotogeryItem("Futbol"),
-                      CotogeryItem("Basketbol"),
-                      CotogeryItem("Voleybol"),
-                      CotogeryItem("Box"),
-                      CotogeryItem("Atletizm"),
-                      CotogeryItem("Tenis"),
-                      CotogeryItem("Hentbol"),
-                      CotogeryItem("Güreş"),
-                      CotogeryItem("Teakwondo"),
-                      CotogeryItem("Golf"),
-                    ],
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CotogeryItem("Futbol"),
+                        CotogeryItem("Basketbol"),
+                        CotogeryItem("Voleybol"),
+                        CotogeryItem("Box"),
+                        CotogeryItem("Atletizm"),
+                        CotogeryItem("Tenis"),
+                        CotogeryItem("Hentbol"),
+                        CotogeryItem("Güreş"),
+                        CotogeryItem("Teakwondo"),
+                        CotogeryItem("Golf"),
+                      ],
+                    ),
                   ),
                 ],
               ),
