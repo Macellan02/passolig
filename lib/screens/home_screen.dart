@@ -71,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: [
+            //sekmeler için container
             Container(
               decoration: BoxDecoration(
                   color: const Color.fromRGBO(115, 115, 115, 1),
@@ -81,7 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 50,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //sekmeler için container
                 children: [
                   Expanded(
                     child: ListView(
@@ -103,6 +103,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+            Row(
+              children: [
+                Column(),
+                Column(),
+                Column(),
+              ],
+            )
           ],
         ),
       ),
@@ -129,79 +136,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
-  Widget BottomMenuItem(String title, IconData icon, bool active) {
-    var renk = Color.fromRGBO(115, 115, 115, 1);
-
-    if (active) {
-      renk = Color.fromRGBO(226, 25, 54, 1);
-    }
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Icon(
-            icon,
-            size: 30,
-            color: renk,
-          ),
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.bold,
-              color: renk,
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-Widget Music_sm(
-  String photo,
-  String title,
-  String artist,
-) {
-  return Padding(
-    padding: const EdgeInsets.only(top: 15),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(
-          children: [
-            Image.asset(
-              photo,
-              width: 75,
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(title,
-                    style: TextStyle(
-                        color: const Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold)),
-                Text(artist,
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 0, 0, 0),
-                      fontSize: 13,
-                    )),
-              ],
-            ),
-          ],
-        ),
-        Icon(
-          Icons.more_vert,
-          color: const Color.fromARGB(255, 0, 0, 0),
-        ),
-      ],
-    ),
-  );
 }
