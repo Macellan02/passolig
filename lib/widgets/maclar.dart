@@ -1,7 +1,24 @@
 import 'package:flutter/material.dart';
 
 class Maclar extends StatelessWidget {
+  final String takim1;
+  final String takimAdi1;
+  final String takim2;
+  final String takimAdi2;
+  final String tarih;
+  final String gun;
+  final String saat;
+  final String lig;
+
   const Maclar({
+    required this.takim1,
+    required this.takimAdi1,
+    required this.takim2,
+    required this.takimAdi2,
+    required this.tarih,
+    required this.gun,
+    required this.saat,
+    required this.lig,
     super.key,
   });
 
@@ -18,7 +35,7 @@ class Maclar extends StatelessWidget {
                 child: Column(
                   children: [
                     Image.asset(
-                      "assets/images/Fenerbahçe.png",
+                      takim1,
                       width: 65,
                       height: 65,
                       fit: BoxFit.fill,
@@ -27,7 +44,7 @@ class Maclar extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      "Fenerbahçe",
+                      takimAdi1,
                       style:
                           TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     )
@@ -42,10 +59,10 @@ class Maclar extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("22 Ocak 2022"),
-                  Text("Pzar"),
+                  Text(tarih),
+                  Text(gun),
                   Text(
-                    "18.00",
+                    saat,
                     style: TextStyle(
                         color: Color.fromRGBO(220, 40, 47, 1),
                         fontWeight: FontWeight.bold),
@@ -54,7 +71,7 @@ class Maclar extends StatelessWidget {
                     height: 10,
                   ),
                   Image.asset(
-                    "assets/images/lig1.png",
+                    lig,
                     width: 50,
                     height: 50,
                   ),
@@ -71,7 +88,7 @@ class Maclar extends StatelessWidget {
                 child: Column(
                   children: [
                     Image.asset(
-                      "assets/images/adıyaman.png",
+                      takim2,
                       width: 65,
                       height: 65,
                       fit: BoxFit.fill,
@@ -80,7 +97,7 @@ class Maclar extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      "Adıyaman",
+                      takimAdi2,
                       style:
                           TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     )
