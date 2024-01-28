@@ -14,6 +14,33 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+      //anasayfa, kartlar, biletlerim , fisikür ,çıkış
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+              icon: Icon(Icons.home),
+              label: "Anasayfa"), //BottomNavigationBarItemBarıtem
+          BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+              icon: Icon(Icons.credit_card),
+              label: "Kartlarım"),
+          BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+              icon: Icon(Icons.confirmation_number),
+              label: "Biletlerim"),
+          BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+              icon: Icon(Icons.assignment),
+              label: "Fikstür"),
+          BottomNavigationBarItem(
+              backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+              icon: Icon(Icons.power_settings_new),
+              label: "ÇIKIŞ"),
+        ],
+      ),
+
       body: Column(
         children: [
           SafeArea(
@@ -55,9 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   //sekmeler
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
+                  Expanded(
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
                       children: [
                         CotogeryItem("Futbol"),
                         CotogeryItem("Basketbol"),
@@ -81,7 +108,6 @@ class _HomeScreenState extends State<HomeScreen> {
               width: double.infinity,
             ),
           ),
-          BottomMenu(),
         ],
       ),
     );
@@ -104,31 +130,6 @@ class _HomeScreenState extends State<HomeScreen> {
         text,
         style: TextStyle(
             fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-
-  Widget BottomMenu() {
-    return Container(
-      width: double.infinity,
-      height: 68,
-      decoration: BoxDecoration(
-        border: Border(
-          top: BorderSide(
-            color: Color.fromRGBO(216, 216, 216, 0.87),
-            width: 2.0,
-          ),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          BottomMenuItem("Ana Sayfa", Icons.home, true),
-          BottomMenuItem("Kartlarım", Icons.credit_card, false),
-          BottomMenuItem("Biletlerim", Icons.confirmation_number, false),
-          BottomMenuItem("Fikstür", Icons.assignment, false),
-          BottomMenuItem("Çıkış", Icons.power_settings_new, false),
-        ],
       ),
     );
   }
