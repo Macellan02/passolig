@@ -67,21 +67,22 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
 
-      body: Column(
-        children: [
-          SafeArea(
-            child: Container(
+      body: SafeArea(
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Container(
               decoration: BoxDecoration(
                   color: const Color.fromRGBO(115, 115, 115, 1),
                   border: Border(
                       bottom:
                           BorderSide(color: Color.fromRGBO(226, 25, 54, 1)))),
               width: double.infinity,
-              height: 145,
+              height: 50,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //sekmeler için container
                 children: [
-                  //sekmeler
                   Expanded(
                     child: ListView(
                       scrollDirection: Axis.horizontal,
@@ -102,13 +103,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-          ),
-          Expanded(
-            child: Container(
-              width: double.infinity,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -117,8 +113,8 @@ class _HomeScreenState extends State<HomeScreen> {
     String text,
   ) {
     return Container(
-      padding: const EdgeInsets.only(top: 7, bottom: 7, left: 12, right: 12),
-      margin: const EdgeInsets.only(top: 25, bottom: 2, left: 4, right: 4),
+      padding: const EdgeInsets.only(top: 3, bottom: 3, left: 12, right: 12),
+      margin: const EdgeInsets.only(top: 15, bottom: 3, left: 4, right: 4),
       decoration: BoxDecoration(
         color: Color.fromRGBO(255, 255, 255, 1),
         borderRadius: BorderRadius.circular(13),
