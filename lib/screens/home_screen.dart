@@ -14,6 +14,32 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+      //logo, serch, pp
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(115, 115, 115, 1),
+        leadingWidth: 120,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 5.0),
+          child: Image.asset("assets/images/logo.png"),
+        ),
+        actions: [
+          Icon(
+            Icons.search,
+            color: Color.fromRGBO(226, 25, 54, 1),
+            size: 30,
+          ),
+          SizedBox(
+            width: 14,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: CircleAvatar(
+              backgroundImage: AssetImage("assets/images/pp.jpg"),
+              radius: 23,
+            ),
+          )
+        ],
+      ),
       //anasayfa, kartlar, biletlerim , fisikür ,çıkış
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -55,32 +81,6 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Image.asset(width: 130, "assets/images/logo.png"),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.search,
-                              color: Color.fromRGBO(226, 25, 54, 1),
-                              size: 38,
-                            ),
-                            SizedBox(
-                              width: 14,
-                            ),
-                            CircleAvatar(
-                              backgroundImage:
-                                  AssetImage("assets/images/pp.jpg"),
-                              radius: 24,
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
                   //sekmeler
                   Expanded(
                     child: ListView(
