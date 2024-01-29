@@ -20,9 +20,13 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(115, 115, 115, 1),
         leadingWidth: 120,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 5.0),
-          child: Image.asset("assets/images/logo.png"),
+        leading: InkWell(
+          child: Icon(Icons.menu),
+        ),
+        title: Image.asset(
+          "assets/images/logo.png",
+          height: 150,
+          width: 150,
         ),
         actions: [
           Icon(
