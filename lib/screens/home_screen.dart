@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-
+import 'drawer.dart';
+import 'media_drawer_mini.dart';
 import '../widgets/appbar.dart';
 import '../widgets/maclar.dart';
 
@@ -223,302 +224,36 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(255, 255, 255, 1),
       body: SafeArea(
-        child: Column(children: [
+          child: Column(
+        children: [
           MyAppBar(),
           Expanded(
-              child: buildScreen(),
-            ),
-        ],)
-    ),);
-                
-              
-            
-            
-  Container CotogeryItem(
-    String text,
-  ) {
-    return Container(
-      padding: const EdgeInsets.only(top: 3, bottom: 3, left: 12, right: 12),
-      margin: const EdgeInsets.only(top: 15, bottom: 3, left: 4, right: 4),
-      decoration: BoxDecoration(
-        color: Color.fromRGBO(255, 255, 255, 1),
-        borderRadius: BorderRadius.circular(13),
-        border: Border.all(
-          color: Color.fromRGBO(226, 25, 54, 1),
-        ),
-      ),
-      child: Text(
-        text,
-        style: TextStyle(
-            fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
-      ),
+            child: buildScreen(),
+          ),
+        ],
+      )),
     );
-  }
-} 
- 
-class MidScreen extends StatelessWidget {
-  const MidScreen({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig1.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/Fenerbahçe.png",
-                      takimAdi1: "Fenerbahçe",
-                      takim2: "assets/images/hamsi.png",
-                      takimAdi2: "Trabzonspor",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
+    Container CotogeryItem(
+      String text,
+    ) {
+      return Container(
+        padding: const EdgeInsets.only(top: 3, bottom: 3, left: 12, right: 12),
+        margin: const EdgeInsets.only(top: 15, bottom: 3, left: 4, right: 4),
+        decoration: BoxDecoration(
+          color: Color.fromRGBO(255, 255, 255, 1),
+          borderRadius: BorderRadius.circular(13),
+          border: Border.all(
+            color: Color.fromRGBO(226, 25, 54, 1),
+          ),
         ),
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/adıyaman.png",
-                      takimAdi1: "Adıyaman",
-                      takim2: "assets/images/borsa.png",
-                      takimAdi2: "Borussia Dortmund",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig1.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/Galatasaray.png",
-                      takimAdi1: "Galatasaray",
-                      takim2: "assets/images/real.png",
-                      takimAdi2: "Real Madrid",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
+        child: Text(
+          text,
+          style: TextStyle(
+              fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
         ),
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/paris.png",
-                      takimAdi1: "Paris Saint-Germain",
-                      takim2: "assets/images/Fenerbahçe.png",
-                      takimAdi2: "Fenerbahçe",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig2.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
+      );
+    }
   }
 }
 
@@ -897,7 +632,273 @@ class LargeScreen extends StatelessWidget {
             ),
           ],
         ),
-     ],
+      ],
+    );
+  }
+}
+
+class MidScreen extends StatelessWidget {
+  const MidScreen({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig1.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/Fenerbahçe.png",
+                      takimAdi1: "Fenerbahçe",
+                      takim2: "assets/images/hamsi.png",
+                      takimAdi2: "Trabzonspor",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/adıyaman.png",
+                      takimAdi1: "Adıyaman",
+                      takim2: "assets/images/borsa.png",
+                      takimAdi2: "Borussia Dortmund",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig1.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/Galatasaray.png",
+                      takimAdi1: "Galatasaray",
+                      takim2: "assets/images/real.png",
+                      takimAdi2: "Real Madrid",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/paris.png",
+                      takimAdi1: "Paris Saint-Germain",
+                      takim2: "assets/images/Fenerbahçe.png",
+                      takimAdi2: "Fenerbahçe",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig2.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16/9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

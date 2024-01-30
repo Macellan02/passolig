@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 class Maclar extends StatelessWidget {
@@ -25,86 +27,91 @@ class Maclar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Row(
-        children: [
-          // TAKIM ARMA VE ADI
-          Expanded(
-              flex: 5,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20, top: 30),
-                child: Column(
-                  children: [
-                    Image.asset(
-                      takim1,
-                      width: 65,
-                      height: 65,
-                      fit: BoxFit.fill,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20.0, top: 30),
+        child: Container(
+          child: Row(
+            children: [
+              // TAKIM ARMA VE ADI
+              Expanded(
+                  flex: 5,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20, top: 30),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          takim1,
+                          width: 65,
+                          height: 65,
+                          fit: BoxFit.fill,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          takimAdi1,
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.bold),
+                        )
+                      ],
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      takimAdi1,
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                    )
-                  ],
+                  )),
+              // SAAT LİG GÜN BİLGİLERİ
+              Expanded(
+                flex: 5,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(tarih),
+                      Text(gun),
+                      Text(
+                        saat,
+                        style: TextStyle(
+                            color: Color.fromRGBO(220, 40, 47, 1),
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Image.asset(
+                        lig,
+                        width: 50,
+                        height: 50,
+                      ),
+                    ],
+                  ),
                 ),
-              )),
-          // SAAT LİG GÜN BİLGİLERİ
-          Expanded(
-            flex: 5,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(tarih),
-                  Text(gun),
-                  Text(
-                    saat,
-                    style: TextStyle(
-                        color: Color.fromRGBO(220, 40, 47, 1),
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Image.asset(
-                    lig,
-                    width: 50,
-                    height: 50,
-                  ),
-                ],
               ),
-            ),
-          ),
 
-          // Rakip takım adı ve arması
-          Expanded(
-              flex: 5,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20, top: 30),
-                child: Column(
-                  children: [
-                    Image.asset(
-                      takim2,
-                      width: 65,
-                      height: 65,
-                      fit: BoxFit.fill,
+              // Rakip takım adı ve arması
+              Expanded(
+                  flex: 5,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20, top: 30),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          takim2,
+                          width: 65,
+                          height: 65,
+                          fit: BoxFit.fill,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          takimAdi2,
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.bold),
+                        )
+                      ],
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      takimAdi2,
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              )),
-        ],
+                  )),
+            ],
+          ),
+        ),
       ),
     );
   }
