@@ -1,31 +1,43 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
-class MyAppBar extends StatelessWidget {
+class MyAppBar extends StatefulWidget {
   const MyAppBar({super.key});
-String ekranTanimla(double width){
-    if(width <= 576) {
+
+  @override
+  State<MyAppBar> createState() => _MyAppBarState();
+}
+
+class _MyAppBarState extends State<MyAppBar> {
+  String ekranTanimla(double width) {
+    if (width <= 576) {
       return "mobile";
-    }
-    else if(width <= 768) {
+    } else if (width <= 768) {
       return "tablet";
-    }
-    else if(width <= 1024) {
+    } else if (width <= 1024) {
       return "desktop";
-    }
-    else  {
+    } else {
       return "large";
     }
   }
-Widget appBar(String device) {
-    if(device == "mobile") {
+
+  Widget appBar(String device) {
+    if (device == "mobile") {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //logo
           Row(
             children: [
-              SizedBox(width: 10,),
-              Image.asset("assets/images/logo.png", height: 150, width: 150,),
+              SizedBox(
+                width: 10,
+              ),
+              Image.asset(
+                "assets/images/logo.png",
+                height: 150,
+                width: 150,
+              ),
             ],
           ),
           //search icon ve pp
@@ -40,27 +52,36 @@ Widget appBar(String device) {
               SizedBox(
                 width: 14,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/pp.jpg"),
-                  radius: 23,
+              InkWell(
+                onTap: () => Navigator.of(context).pushNamed('/register'),
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.black,
+                    size: 30,
+                  ),
                 ),
               ),
             ],
           ),
         ],
       );
-    }
-    else if(device == "tablet"){
+    } else if (device == "tablet") {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //logo
           Row(
             children: [
-              SizedBox(width: 10,),
-              Image.asset("assets/images/logo.png", height: 150, width: 150,),
+              SizedBox(
+                width: 10,
+              ),
+              Image.asset(
+                "assets/images/logo.png",
+                height: 150,
+                width: 150,
+              ),
             ],
           ),
           //search icon ve pp
@@ -75,19 +96,22 @@ Widget appBar(String device) {
               SizedBox(
                 width: 14,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/pp.jpg"),
-                  radius: 23,
+              InkWell(
+                onTap: () => Navigator.of(context).pushNamed('/register'),
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.black,
+                    size: 30,
+                  ),
                 ),
               ),
             ],
           ),
         ],
       );
-    }
-    else if(device == "desktop"){
+    } else if (device == "desktop") {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -98,8 +122,14 @@ Widget appBar(String device) {
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Icon(Icons.menu),
               ),
-              SizedBox(width: 10,),
-              Image.asset("assets/images/logo.png", height: 150, width: 150,),
+              SizedBox(
+                width: 10,
+              ),
+              Image.asset(
+                "assets/images/logo.png",
+                height: 150,
+                width: 150,
+              ),
             ],
           ),
           // search kısmı
@@ -134,19 +164,22 @@ Widget appBar(String device) {
               SizedBox(
                 width: 14,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/pp.jpg"),
-                  radius: 23,
+              InkWell(
+                onTap: () => Navigator.of(context).pushNamed('/register'),
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.black,
+                    size: 30,
+                  ),
                 ),
               ),
             ],
           ),
         ],
       );
-    }
-    else {
+    } else {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -157,8 +190,14 @@ Widget appBar(String device) {
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Icon(Icons.menu),
               ),
-              SizedBox(width: 10,),
-              Image.asset("assets/images/logo.png", height: 150, width: 150,),
+              SizedBox(
+                width: 10,
+              ),
+              Image.asset(
+                "assets/images/logo.png",
+                height: 150,
+                width: 150,
+              ),
             ],
           ),
           // search kısmı
@@ -193,11 +232,15 @@ Widget appBar(String device) {
               SizedBox(
                 width: 14,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/pp.jpg"),
-                  radius: 23,
+              InkWell(
+                onTap: () => Navigator.of(context).pushNamed('/register'),
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.black,
+                    size: 30,
+                  ),
                 ),
               ),
             ],
@@ -205,7 +248,8 @@ Widget appBar(String device) {
         ],
       );
     }
-  }  
+  }
+
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
@@ -213,7 +257,7 @@ Widget appBar(String device) {
     return Container(
       height: 60,
       color: Color.fromRGBO(115, 115, 115, 1),
-      child:appBar(device),
+      child: appBar(device),
     );
   }
 }

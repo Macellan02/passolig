@@ -31,8 +31,7 @@ class Maclar extends StatelessWidget {
         padding: const EdgeInsets.only(left: 20.0, top: 30),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white,
-            boxShadow: const [BoxShadow(blurRadius: 10)],
+            color: Color.fromARGB(0, 255, 255, 255),
             border: Border.all(
               color: Color.fromRGBO(212, 57, 55, 1),
             ),
