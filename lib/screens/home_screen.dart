@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, dead_code
 
 import 'package:flutter/material.dart';
 import 'drawer.dart';
@@ -36,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
         return Scaffold(
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
+            selectedItemColor: Color.fromRGBO(216, 57, 52, 1),
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
@@ -56,8 +57,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               BottomNavigationBarItem(
                 backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
-                icon: Icon(Icons.power_settings_new),
-                label: "Çıkış",
+                icon: Icon(Icons.settings),
+                label: "Ayarlar",
               ),
             ],
           ),
@@ -85,12 +86,63 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   children: [
                     Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
+                      takim1: "assets/images/hamsi.png",
+                      takimAdi1: "Trabzon",
+                      takim2: "assets/images/intel.png",
+                      takimAdi2: "İntel",
+                      tarih: "20.02.2024",
+                      gun: "salı",
+                      saat: "15.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/adıyaman.png",
+                      takimAdi1: "Adıyaman",
+                      takim2: "assets/images/real.png",
+                      takimAdi2: "Real Madrid",
+                      tarih: "2.03.2024",
+                      gun: "cuma",
+                      saat: "22.00",
+                      lig: "assets/images/lig1.png",
+                    ),
+                  ],
+                ),
+              ),
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/milan.png",
+                      takimAdi1: "Milan",
+                      takim2: "assets/images/paris.png",
+                      takimAdi2: "Paris",
                       tarih: "11.02.2024",
                       gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig2.png",
+                    ),
+                  ],
+                ),
+              ),
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/giresun.png",
+                      takimAdi1: "Giresun",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.04.2024",
+                      gun: "Pazartesi",
                       saat: "19.00",
                       lig: "assets/images/lig3.png",
                     ),
@@ -119,59 +171,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   children: [
                     Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-              AspectRatio(
-                aspectRatio: 16 / 9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-              AspectRatio(
-                aspectRatio: 16 / 9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-              AspectRatio(
-                aspectRatio: 16 / 9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
+                      takim1: "assets/images/borsa.png",
+                      takimAdi1: "Borsa dourdmund",
                       takim2: "assets/images/adana.png",
                       takimAdi2: "Adana",
                       tarih: "11.02.2024",
@@ -257,7 +258,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class LargeScreen extends StatelessWidget {     
+class LargeScreen extends StatelessWidget {
   const LargeScreen({
     super.key,
   });
@@ -270,7 +271,7 @@ class LargeScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -289,7 +290,7 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -308,7 +309,7 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -331,7 +332,7 @@ class LargeScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -350,7 +351,7 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -369,7 +370,7 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -392,7 +393,7 @@ class LargeScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -411,7 +412,7 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -430,68 +431,7 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),     
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -514,7 +454,68 @@ class LargeScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -533,7 +534,7 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -552,7 +553,7 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -575,26 +576,7 @@ class LargeScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),     
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -613,7 +595,26 @@ class LargeScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -650,7 +651,7 @@ class MidScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -669,7 +670,7 @@ class MidScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -692,7 +693,7 @@ class MidScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -711,7 +712,7 @@ class MidScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -734,7 +735,7 @@ class MidScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -753,7 +754,7 @@ class MidScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -776,7 +777,7 @@ class MidScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -795,49 +796,7 @@ class MidScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: [
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
-                child: Column(
-                  children: [
-                    Maclar(
-                      takim1: "assets/images/barca.png",
-                      takimAdi1: "Barcelona",
-                      takim2: "assets/images/adana.png",
-                      takimAdi2: "Adana",
-                      tarih: "11.02.2024",
-                      gun: "Pazar",
-                      saat: "19.00",
-                      lig: "assets/images/lig3.png",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -860,7 +819,7 @@ class MidScreen extends StatelessWidget {
           children: [
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(
@@ -879,7 +838,49 @@ class MidScreen extends StatelessWidget {
             ),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 16/9,
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Column(
+                  children: [
+                    Maclar(
+                      takim1: "assets/images/barca.png",
+                      takimAdi1: "Barcelona",
+                      takim2: "assets/images/adana.png",
+                      takimAdi2: "Adana",
+                      tarih: "11.02.2024",
+                      gun: "Pazar",
+                      saat: "19.00",
+                      lig: "assets/images/lig3.png",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 16 / 9,
                 child: Column(
                   children: [
                     Maclar(

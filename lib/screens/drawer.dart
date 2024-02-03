@@ -35,7 +35,7 @@ class _Drawer1State extends State<Drawer1> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: Colors.grey.shade200,
+                        color: const Color.fromRGBO(220, 49, 58, 1),
                         width: 3,
                       ),
                     ),
@@ -46,86 +46,83 @@ class _Drawer1State extends State<Drawer1> {
                   ),
                 ],
               ))),
-              // Base Parts
+              // Menü parts
               Padding(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 12.0, vertical: 12.0),
                 child: Text(
-                  'BASE PARTS',
+                  'MENÜLER',
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
+
               MenuTile1(
-                title: 'Reservation',
-                icon: Icon(Icons.menu, size: 18),
+                title: 'Ana Sayfa',
+                onTap: () {},
+                icon: Icon(Icons.home, size: 18),
+                expanded: false,
+              ),
+
+              MenuTile1(
+                title: 'Kart',
+                icon: Icon(Icons.credit_card, size: 18),
                 expanded: true,
                 children: [
                   MenuTile1(
-                    title: 'Hotel Reservation',
+                    title: 'Passolig Kredi Kartı',
                   ),
                   MenuTile1(
-                    title: 'Archive',
+                    title: 'Passolig Banka Kart',
                   ),
                   MenuTile1(
-                    title: 'Statistics',
+                    title: 'Passolig Cüzdan',
                   ),
                   MenuTile1(
-                    title: 'Board',
+                    title: 'Passolig Gold',
                   ),
                 ],
               ),
               MenuTile1(
-                title: 'Only Transfer',
+                title: 'Biletlerim',
                 onTap: () {},
-                icon: Icon(Icons.favorite, size: 18),
+                icon: Icon(Icons.confirmation_num, size: 18),
                 expanded: false,
               ),
               MenuTile1(
-                title: 'Operations',
-                icon: Icon(Icons.notifications, size: 18),
+                title: 'Fikstür',
+                onTap: () {},
+                icon: Icon(Icons.assignment, size: 18),
                 expanded: false,
               ),
+
               MenuTile1(
-                title: 'Reporting',
-                icon: Icon(Icons.person, size: 18),
+                title: 'Tartışmalar',
+                icon: Icon(Icons.forum, size: 18),
                 expanded: false,
-                children: [
-                  MenuTile1(
-                    title: 'Hotel Reservation',
-                  ),
-                  MenuTile1(
-                    title: 'Archive',
-                  ),
-                  MenuTile1(
-                    title: 'Statistics',
-                  ),
-                  MenuTile1(
-                    title: 'Board',
-                  ),
-                ],
               ),
               // Definition
               Padding(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 12.0, vertical: 12.0),
                 child: Text(
-                  'DEFINITION',
+                  'GENEL',
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
               MenuTile1(
-                title: 'General',
+                title: 'Sosyal Media',
+                icon: Icon(Icons.public, size: 18),
+                expanded: false,
+              ),
+              MenuTile1(
+                title: 'Ayarlar',
                 icon: Icon(Icons.settings, size: 18),
                 expanded: false,
               ),
+
               MenuTile1(
-                title: 'Hotels',
-                icon: Icon(Icons.hotel, size: 18),
-                expanded: false,
-              ),
-              MenuTile1(
-                title: 'Tours',
-                icon: Icon(Icons.tour, size: 18),
+                title: 'Destek',
+                icon: Icon(Icons.support_agent, size: 18),
                 expanded: false,
               ),
             ],
