@@ -9,4 +9,14 @@
 
 ## Screens
 
-![homesecreen]()
+![homesecreen](assets/images/home_screen.jpg)
+
+![registersecreen](assets/images/register_screen.jpg)
+
+![loginsecreen](assets/images/login_screen.jpg)
+
+![responsivesecreen](assets/images/home_screen_tablet.jpg)
+
+![responsivesecreen](assets/images/home_screen_desktop.jpg)
+
+![responsivesecreen](assets/images/home_screen_large.jpg)
