@@ -3,10 +3,20 @@
 >Developers:
 >>Yasin Bilgin x 221216047
 >>Gürkan Emre Duymaç x 221216044
->>ARMAN VEKİLZADE x 220901753
+>>Arman Vekilzade x 220901753
 
 [Supervisor: Keyvan Arasteh](https://github.com/keyvanarasteh)
 
 ## Screens
 
-![homesecreen]()
+![homesecreen](assets/images/home_screen.jpg)
+
+![registersecreen](assets/images/register_screen.jpg)
+
+![loginsecreen](assets/images/login_screen.jpg)
+
+![responsivesecreen](assets/images/home_screen_tablet.jpg)
+
+![responsivesecreen](assets/images/home_screen_desktop.jpg)
+
+![responsivesecreen](assets/images/home_screen_large.jpg)

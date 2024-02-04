@@ -90,7 +90,12 @@ class _Drawer1State extends State<Drawer1> {
               ),
               // Definition
               Padding(
+<<<<<<< HEAD
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 12.0, vertical: 12.0),
+=======
                 padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
+>>>>>>> 0c0cf89a3b3a28c8f6982b6a9059f82667ba57ff
                 child: Text(
                   'GENEL',
                   style: Theme.of(context).textTheme.bodySmall,
@@ -101,6 +106,42 @@ class _Drawer1State extends State<Drawer1> {
                 icon: Icon(Icons.settings, size: 18),
                 expanded: false,
               ),
+<<<<<<< HEAD
+              // Gece Modu
+              Padding(
+                padding: const EdgeInsets.only(left: 11, right: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.dark_mode,
+                          size: 18,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text("Gece Modu"),
+                      ],
+                    ),
+                    Switch(
+                        activeTrackColor: Color.fromRGBO(220, 49, 58, 1),
+                        value: false,
+                        onChanged: (value) {
+                          print(value);
+                        }),
+                  ],
+                ),
+              ),
+
+              MenuTile1(
+                title: 'Destek',
+                icon: Icon(Icons.support_agent, size: 18),
+                expanded: false,
+              ),
+=======
+>>>>>>> 0c0cf89a3b3a28c8f6982b6a9059f82667ba57ff
             ],
           ),
         )
