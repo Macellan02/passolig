@@ -28,7 +28,7 @@ class Maclar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(left: 20.0, top: 30),
+        padding: const EdgeInsets.all(8.0),
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white,
