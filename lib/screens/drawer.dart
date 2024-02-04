@@ -101,7 +101,7 @@ class _Drawer1State extends State<Drawer1> {
                 expanded: false,
               ),
               // Definition
-              /* Padding(
+              Padding(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 12.0, vertical: 12.0),
                 child: Text(
@@ -146,7 +146,7 @@ class _Drawer1State extends State<Drawer1> {
                   ],
                 ),
               ),
- */
+
               MenuTile1(
                 title: 'Destek',
                 icon: Icon(Icons.support_agent, size: 18),
