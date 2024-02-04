@@ -22,18 +22,6 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/register': (context) => UserScreen(),
       },
-<<<<<<< HEAD
-      themeMode: ThemeMode.light,
-      theme: ThemeData(
-        useMaterial3: false,
-      ),
-      darkTheme: ThemeData.dark(),
-=======
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
->>>>>>> 0c0cf89a3b3a28c8f6982b6a9059f82667ba57ff
       home: const HomeScreen(),
     );
   }
