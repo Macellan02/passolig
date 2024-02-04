@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mobil_programlama_vize/screens/home_screen.dart';
+import 'screens/home_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/user_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Passolig',
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/home': (context) => HomeScreen(),
+        '/login': (context) => LoginScreen(),
+        '/register': (context) => UserScreen(),
+      },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
