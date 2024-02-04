@@ -2,12 +2,15 @@
 
 import 'package:flutter/material.dart';
 
+
 import '../widgets/appbar.dart';
 import '../widgets/maclar.dart';
 import 'drawer.dart';
 import 'media_drawer_mini.dart';
 
 class HomeScreen extends StatefulWidget {
+  
+
   const HomeScreen({super.key});
 
   @override
@@ -15,178 +18,186 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String ekranTanimla(double width) {
-    if (width <= 576) {
+
+   String ekranTanimla(double width){
+    if(width <= 576) {
       return "mobile";
-    } else if (width <= 768) {
+    }
+    else if(width <= 768) {
       return "tablet";
-    } else if (width <= 1024) {
+    }
+    else if(width <= 1024) {
       return "desktop";
-    } else {
+    }
+    else  {
       return "large";
     }
   }
 
   @override
   Widget build(BuildContext context) {
+
     var screenWidth = MediaQuery.of(context).size.width;
     var device = ekranTanimla(screenWidth);
 
     Widget buildScreen() {
-      if (device == "mobile") {
-        return Scaffold(
-          bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Color.fromRGBO(115, 115, 115, 1),
-            type: BottomNavigationBarType.fixed,
-            selectedItemColor: Colors.red,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
-                icon: Icon(Icons.home),
-                label: "Anasayfa",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.credit_card),
-                label: "Kartları",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.confirmation_number),
-                label: "Biletlerim",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.assignment),
-                label: "Fikstür",
-              ),
-              BottomNavigationBarItem(
-                backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
-                icon: Icon(Icons.settings),
-                label: "Ayarlar ",
-              ),
-            ],
+      if(device == "mobile") {
+      return Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Color.fromRGBO(115, 115, 115, 1),
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.red,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+            icon: Icon(Icons.home),
+            label: "Anasayfa",
           ),
-          body: ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              Expanded(
-                child: Maclar(
-                  takim1: "assets/images/barca.png",
-                  takimAdi1: "Barcelona",
-                  takim2: "assets/images/adana.png",
-                  takimAdi2: "Adana",
-                  tarih: "11.02.2024",
-                  gun: "Pazar",
-                  saat: "19.00",
-                  lig: "assets/images/lig3.png",
-                ),
-              ),
-              Expanded(
-                child: Maclar(
-                  takim1: "assets/images/Fenerbahçe.png",
-                  takimAdi1: "Fenerbahçe",
-                  takim2: "assets/images/hamsi.png",
-                  takimAdi2: "Trabzonspor",
-                  tarih: "11.02.2024",
-                  gun: "Pazar",
-                  saat: "19.00",
-                  lig: "assets/images/lig3.png",
-                ),
-              ),
-              Expanded(
-                child: Maclar(
-                  takim1: "assets/images/adıyaman.png",
-                  takimAdi1: "Adıyaman",
-                  takim2: "assets/images/borsa.png",
-                  takimAdi2: "B.Dortmund",
-                  tarih: "11.02.2024",
-                  gun: "Pazar",
-                  saat: "19.00",
-                  lig: "assets/images/lig1.png",
-                ),
-              ),
-              Expanded(
-                child: Maclar(
-                  takim1: "assets/images/Galatasaray.png",
-                  takimAdi1: "Galatasaray",
-                  takim2: "assets/images/real.png",
-                  takimAdi2: "Real Madrid",
-                  tarih: "11.02.2024",
-                  gun: "Pazar",
-                  saat: "19.00",
-                  lig: "assets/images/lig3.png",
-                ),
-              ),
-              Expanded(
-                child: Maclar(
-                  takim1: "assets/images/paris.png",
-                  takimAdi1: "Paris S-G",
-                  takim2: "assets/images/Fenerbahçe.png",
-                  takimAdi2: "Fenerbahçe",
-                  tarih: "11.02.2024",
-                  gun: "Pazar",
-                  saat: "19.00",
-                  lig: "assets/images/lig2.png",
-                ),
-              ),
-              Expanded(
-                child: Maclar(
-                  takim1: "assets/images/barca.png",
-                  takimAdi1: "Barcelona",
-                  takim2: "assets/images/adana.png",
-                  takimAdi2: "Adana",
-                  tarih: "11.02.2024",
-                  gun: "Pazar",
-                  saat: "19.00",
-                  lig: "assets/images/lig3.png",
-                ),
-              ),
-              Expanded(
-                child: Maclar(
-                  takim1: "assets/images/giresun.png",
-                  takimAdi1: "Giresun",
-                  takim2: "assets/images/hamsi.png",
-                  takimAdi2: "Trabzon",
-                  tarih: "11.02.2024",
-                  gun: "Pazar",
-                  saat: "19.00",
-                  lig: "assets/images/lig3.png",
-                ),
-              ),
-            ],
+          BottomNavigationBarItem(
+            icon: Icon(Icons.credit_card),
+            label: "Kartları",
           ),
-        );
-      } else if (device == "tablet") {
-        return Row(
+          BottomNavigationBarItem(
+            icon: Icon(Icons.confirmation_number),
+            label: "Biletlerim",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.assignment),
+            label: "Fikstür",
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+            icon: Icon(Icons.settings),
+            label: "Ayarlar ",
+          ),
+        ],
+      ),
+        body: ListView(
+          scrollDirection: Axis.vertical,
           children: [
-            //mini drawer kısmı
-            MediaDrawerMini(),
-            //ekranım
+            Expanded(
+              child: Maclar(
+                takim1: "assets/images/barca.png",
+                takimAdi1: "Barcelona",
+                takim2: "assets/images/adana.png",
+                takimAdi2: "Adana",
+                tarih: "11.02.2024",
+                gun: "Pazar",
+                saat: "19.00",
+                lig: "assets/images/lig3.png",
+              ),
+            ),
+            Expanded(
+              child: Maclar(
+                takim1: "assets/images/Fenerbahçe.png",
+                takimAdi1: "Fenerbahçe",
+                takim2: "assets/images/hamsi.png",
+                takimAdi2: "Trabzonspor",
+                tarih: "11.02.2024",
+                gun: "Pazar",
+                saat: "19.00",
+                lig: "assets/images/lig3.png",
+              ),
+            ),
+            Expanded(
+              child: Maclar(
+                takim1: "assets/images/adıyaman.png",
+                takimAdi1: "Adıyaman",
+                takim2: "assets/images/borsa.png",
+                takimAdi2: "B.Dortmund",
+                tarih: "11.02.2024",
+                gun: "Pazar",
+                saat: "19.00",
+                lig: "assets/images/lig1.png",
+              ),
+            ),
+            Expanded(
+              child: Maclar(
+                takim1: "assets/images/Galatasaray.png",
+                takimAdi1: "Galatasaray",
+                takim2: "assets/images/real.png",
+                takimAdi2: "Real Madrid",
+                tarih: "11.02.2024",
+                gun: "Pazar",
+                saat: "19.00",
+                lig: "assets/images/lig3.png",
+              ),
+            ),
+            Expanded(
+              child: Maclar(
+                takim1: "assets/images/paris.png",
+                takimAdi1: "Paris S-G",
+                takim2: "assets/images/Fenerbahçe.png",
+                takimAdi2: "Fenerbahçe",
+                tarih: "11.02.2024",
+                gun: "Pazar",
+                saat: "19.00",
+                lig: "assets/images/lig2.png",
+              ),
+            ),
+            Expanded(
+              child: Maclar(
+                takim1: "assets/images/barca.png",
+                takimAdi1: "Barcelona",
+                takim2: "assets/images/adana.png",
+                takimAdi2: "Adana",
+                tarih: "11.02.2024",
+                gun: "Pazar",
+                saat: "19.00",
+                lig: "assets/images/lig3.png",
+              ),
+            ),
+            Expanded(
+              child: Maclar(
+                takim1: "assets/images/giresun.png",
+                takimAdi1: "Giresun",
+                takim2: "assets/images/hamsi.png",
+                takimAdi2: "Trabzon",
+                tarih: "11.02.2024",
+                gun: "Pazar",
+                saat: "19.00",
+                lig: "assets/images/lig3.png",
+              ),
+            ),
+          ],
+        ),
+      );
+      }
+      else if(device == "tablet") {
+      return Row(
+        children: [
+          //mini drawer kısmı
+          MediaDrawerMini(),
+          //ekranım
             Expanded(
               child: MidScreen(),
             ),
-          ],
-        );
-      } else if (device == "desktop") {
-        return Row(
-          children: [
-            //mini drawer kısmı
-            Drawer1(),
-            //ekranım
-            Expanded(
+        ],
+      );
+      }
+      else if(device == "desktop") {
+      return Row(
+        children: [
+          //mini drawer kısmı
+          Drawer1(),
+          //ekranım
+           Expanded(
               child: MidScreen(),
             ),
-          ],
-        );
-      } else {
-        return Row(
-          children: [
-            //mini drawer kısmı
-            Drawer1(),
-            //ekranım
-            Expanded(
+        ],
+      );
+      }
+      else {
+      return Row(
+        children: [
+          //mini drawer kısmı
+          Drawer1(),
+          //ekranım
+           Expanded(
               child: LargeScreen(),
             ),
-          ],
-        );
+        ],
+      );
       }
     }
 
@@ -455,6 +466,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
+
 class MidScreen extends StatelessWidget {
   const MidScreen({
     super.key,
@@ -637,7 +649,7 @@ class MidScreen extends StatelessWidget {
   }
 }
 
-class LargeScreen extends StatelessWidget {
+class LargeScreen extends StatelessWidget {     
   const LargeScreen({
     super.key,
   });
@@ -684,6 +696,7 @@ class LargeScreen extends StatelessWidget {
                 lig: "assets/images/lig1.png",
               ),
             ),
+            
           ],
         ),
         Row(
@@ -764,7 +777,7 @@ class LargeScreen extends StatelessWidget {
                 lig: "assets/images/lig3.png",
               ),
             ),
-          ],
+            ],
         ),
         Row(
           children: [
@@ -884,9 +897,10 @@ class LargeScreen extends StatelessWidget {
                 lig: "assets/images/lig3.png",
               ),
             ),
-          ],
+            ],
         ),
       ],
     );
   }
 }
+
