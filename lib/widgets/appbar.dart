@@ -81,6 +81,17 @@ class _MyAppBarState extends State<MyAppBar> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              InkWell(
+                onTap:() => Navigator.of(context).pushNamed('/settings'),
+                child: Icon(
+                  Icons.settings,
+                  color: Color.fromRGBO(226, 25, 54, 1),
+                  size: 30,
+                ),
+              ),
+              SizedBox(
+                width: 14,
+              ),
               Icon(
                 Icons.search,
                 color: Color.fromRGBO(226, 25, 54, 1),
@@ -149,6 +160,17 @@ class _MyAppBarState extends State<MyAppBar> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              InkWell(
+                onTap:() => Navigator.of(context).pushNamed('/settings'),
+                child: Icon(
+                  Icons.settings,
+                  color: Color.fromRGBO(226, 25, 54, 1),
+                  size: 30,
+                ),
+              ),
+              SizedBox(
+                width: 14,
+              ),
               SizedBox(
                 width: 14,
               ),
@@ -212,6 +234,17 @@ class _MyAppBarState extends State<MyAppBar> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              InkWell(
+                onTap:() => Navigator.of(context).pushNamed('/settings'),
+                child: Icon(
+                  Icons.settings,
+                  color: Color.fromRGBO(226, 25, 54, 1),
+                  size: 30,
+                ),
+              ),
+              SizedBox(
+                width: 14,
+              ),
               SizedBox(
                 width: 14,
               ),
