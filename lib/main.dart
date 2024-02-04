@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/register': (context) => UserScreen(),
       },
-      themeMode: ThemeMode.light,
+      //themeMode: ThemeMode.light,
       theme: ThemeData(
-        useMaterial3: true,
-      ),
-      darkTheme: ThemeData.dark(),
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
+      //darkTheme: ThemeData.dark(),
       home: const HomeScreen(),
     );
   }

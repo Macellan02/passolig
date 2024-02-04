@@ -192,13 +192,243 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+      //logo, search, pp
+      /*appBar:  AppBar(
+        backgroundColor: Color.fromRGBO(115, 115, 115, 1),
+        leadingWidth: 120,
+        leading: Icon(Icons.menu),
+        title: Image.asset("assets/images/logo.png", height: 150, width: 150,),
+        actions: [
+          Icon(
+            Icons.search,
+            color: Color.fromRGBO(226, 25, 54, 1),
+            size: 30,
+          ),
+          SizedBox(
+            width: 14,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: CircleAvatar(
+              backgroundImage: AssetImage("assets/images/pp.jpg"),
+              radius: 23,
+            ),
+          ),
+        ],
+      ), */
+      //anasayfa, kartlar, biletlerim, fikstür, çıkış
+      /* bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+            icon: Icon(Icons.home),
+            label: "Anasayfa",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.credit_card),
+            label: "Kartları",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.confirmation_number),
+            label: "Biletlerim",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.assignment),
+            label: "Fikstür",
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Color.fromRGBO(134, 126, 126, 0.867),
+            icon: Icon(Icons.power_settings_new),
+            label: "Çıkış",
+          ),
+        ],
+      ), */
       body: SafeArea(
         child: Column(
           children: [
             MyAppBar(),
+            /* ListView(
+              scrollDirection: Axis.vertical,
+              children: [
+                //sekmeler için container
+                Container(
+                  decoration: BoxDecoration(
+                      color: const Color.fromRGBO(115, 115, 115, 1),
+                      border: Border(
+                          bottom:
+                              BorderSide(color: Color.fromRGBO(226, 25, 54, 1)))),
+                  width: double.infinity,
+                  height: 50,
+                  child: Expanded(
+                    //sekmeler
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        CotogeryItem("Futbol"),
+                        CotogeryItem("Basketbol"),
+                        CotogeryItem("Voleybol"),
+                        CotogeryItem("Box"),
+                        CotogeryItem("Atletizm"),
+                        CotogeryItem("Tenis"),
+                        CotogeryItem("Hentbol"),
+                        CotogeryItem("Güreş"),
+                        CotogeryItem("Teakwondo"),
+                        CotogeryItem("Golf"),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ), */
             Expanded(
               child: buildScreen(),
             ),
+            /* ListView(
+              scrollDirection: Axis.vertical,
+              children: [
+                //sekmeler için container
+                Container(
+                  decoration: BoxDecoration(
+                      color: const Color.fromRGBO(115, 115, 115, 1),
+                      border: Border(
+                          bottom:
+                              BorderSide(color: Color.fromRGBO(226, 25, 54, 1)))),
+                  width: double.infinity,
+                  height: 50,
+                  child: Expanded(
+                    //sekmeler
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        CotogeryItem("Futbol"),
+                        CotogeryItem("Basketbol"),
+                        CotogeryItem("Voleybol"),
+                        CotogeryItem("Box"),
+                        CotogeryItem("Atletizm"),
+                        CotogeryItem("Tenis"),
+                        CotogeryItem("Hentbol"),
+                        CotogeryItem("Güreş"),
+                        CotogeryItem("Teakwondo"),
+                        CotogeryItem("Golf"),
+                      ],
+                    ),
+                  ),
+                ),
+                //burası widget olacak olmasa da olur
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      //takım arma ve adı
+                      Expanded(
+                        flex: 5,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20.0, top: 30),
+                          child: Column(
+                            children: [
+                              Image.asset("assets/images/Fenerbahçe.png",
+                                  width: 65, height: 65, fit: BoxFit.fill),
+                              SizedBox(height: 10),
+                              Text(
+                                "Fenerbahçe",
+                                style: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      //tarih, gün, saat ve satın al butonu
+                      Expanded(
+                        flex: 5,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text("11 Şubat 2024"),
+                              Text("Pazar"),
+                              Text("19.00",
+                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red)),
+                              SizedBox(
+                                height: 10, 
+                              ),
+                              Image.asset("assets/images/lig3.png",
+                                  width: 50, height: 50, fit: BoxFit.fill),
+                              /* ElevatedButton(
+                                onPressed: () {}, 
+                                child: Text("Satın Al", style: TextStyle(color: Colors.white),),
+                                style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.red)),
+                                ), */
+                            ],
+                          ),
+                        ),
+                      ),
+                      //rakip takım arma ve adı
+                      Expanded(
+                        flex: 5,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 20.0, top: 30),
+                          child: Column(
+                            children: [
+                              Image.asset("assets/images/Fenerbahçe.png",
+                                  width: 65, height: 65, fit: BoxFit.fill),
+                              SizedBox(height: 10),
+                              Text(
+                                "Fenerbahçe",
+                                style: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Maclar(
+                  takim1: "assets/images/barca.png",
+                  takimAdi1: "Barcelona",
+                  takim2: "assets/images/adana.png",
+                  takimAdi2: "Adana",
+                  tarih: "11.02.2024",
+                  gun: "Pazar",
+                  saat: "19.00",
+                  lig: "assets/images/lig3.png",
+                ),
+                Maclar(
+                  takim1: "assets/images/barca.png",
+                  takimAdi1: "Barcelona",
+                  takim2: "assets/images/adana.png",
+                  takimAdi2: "Adana",
+                  tarih: "11.02.2024",
+                  gun: "Pazar",
+                  saat: "19.00",
+                  lig: "assets/images/lig3.png",
+                ),
+                Maclar(
+                  takim1: "assets/images/barca.png",
+                  takimAdi1: "Barcelona",
+                  takim2: "assets/images/adana.png",
+                  takimAdi2: "Adana",
+                  tarih: "11.02.2024",
+                  gun: "Pazar",
+                  saat: "19.00",
+                  lig: "assets/images/lig3.png",
+                ),
+                Maclar(
+                  takim1: "assets/images/barca.png",
+                  takimAdi1: "Barcelona",
+                  takim2: "assets/images/adana.png",
+                  takimAdi2: "Adana",
+                  tarih: "11.02.2024",
+                  gun: "Pazar",
+                  saat: "19.00",
+                  lig: "assets/images/lig3.png",
+                ),
+              ],
+            ), */
           ],
         ),
       ),

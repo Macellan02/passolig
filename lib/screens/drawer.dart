@@ -101,7 +101,7 @@ class _Drawer1State extends State<Drawer1> {
                 expanded: false,
               ),
               // Definition
-              Padding(
+              /* Padding(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 12.0, vertical: 12.0),
                 child: Text(
@@ -139,14 +139,14 @@ class _Drawer1State extends State<Drawer1> {
                     ),
                     Switch(
                         activeTrackColor: Color.fromRGBO(220, 49, 58, 1),
-                        value: true,
+                        value: false,
                         onChanged: (value) {
                           print(value);
                         }),
                   ],
                 ),
               ),
-
+ */
               MenuTile1(
                 title: 'Destek',
                 icon: Icon(Icons.support_agent, size: 18),
