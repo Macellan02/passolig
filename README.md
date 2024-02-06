@@ -17,6 +17,10 @@
 
 ![responsivesecreen](assets/images/home_screen_tablet.jpg)
 
+![storage](assets/images/storage.jpg)
+
+![storagedel](assets/images/storage_del.jpg)
+
 ![responsivesecreen](assets/images/home_screen_desktop.jpg)
 
 ![responsivesecreen](assets/images/home_screen_large.jpg)
