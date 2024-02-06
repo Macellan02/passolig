@@ -69,11 +69,6 @@ class _MyAppState extends State<MyApp> {
         '/settings': (context) => SettingScreen(),
 
       },
-      themeMode: ThemeMode.light,
-      theme: ThemeData(
-        useMaterial3: false,
-      ),
-      darkTheme: ThemeData.dark(),
       home: const HomeScreen(),
     );
   }
