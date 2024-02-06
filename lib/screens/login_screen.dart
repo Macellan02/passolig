@@ -172,6 +172,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: SizedBox(
                     height: 45,
                     child: TextField(
+                      //şifre için nokta nokta yapar
+                      obscureText: true,
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
