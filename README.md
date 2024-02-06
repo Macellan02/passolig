@@ -13,13 +13,13 @@
 
 ![registersecreen](assets/images/register_screen.PNG.jpg)
 
-![loginsecreen](assets/images/login_screen.jpg)
-
-![responsivesecreen](assets/images/home_screen_tablet.jpg)
-
 ![storage](assets/images/storage.jpg)
 
 ![storagedel](assets/images/storage_del.jpg)
+
+![loginsecreen](assets/images/login_screen.jpg)
+
+![responsivesecreen](assets/images/home_screen_tablet.jpg)
 
 ![responsivesecreen](assets/images/home_screen_desktop.jpg)
 
