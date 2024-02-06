@@ -112,7 +112,7 @@ class _UserScreenState extends State<UserScreen> {
           height: 150,
           width: 150,
         ),
-        /* actions: [
+        actions: [
           InkWell(
             onTap: clearData,
             child: Padding(
@@ -120,14 +120,14 @@ class _UserScreenState extends State<UserScreen> {
               child: Icon(Icons.delete),
             ),
           ),
-          InkWell(
+          /* InkWell(
             onTap: storeData,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Icon(Icons.save),
             ),
-          ),
-        ], */
+          ), */
+        ],
       ),
       body: SafeArea(
         child: Padding(
@@ -225,6 +225,8 @@ class _UserScreenState extends State<UserScreen> {
                       child: SizedBox(
                     height: 45,
                     child: TextField(
+                      //şifre için nokta nokta yapar
+                      obscureText: true,
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(

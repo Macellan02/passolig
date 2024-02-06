@@ -11,7 +11,7 @@
 
 ![homesecreen](assets/images/home_screen.jpg)
 
-![registersecreen](assets/images/register_screen.jpg)
+![registersecreen](assets/images/register_screen.PNG.jpg)
 
 ![loginsecreen](assets/images/login_screen.jpg)
 
